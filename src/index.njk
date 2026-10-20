@@ -5,13 +5,13 @@ description: "Emma, éducatrice canine et pet-sitter dans l'Embrunais (Hautes-Al
 bodyClass: home
 ---
 <section class="hero">
+  <div class="hero__bg">{% image "sirius-montagne.jpeg", "Sirius, le malinois d'Emma, assis dans l'herbe face aux montagnes", "100vw", "", "eager" %}</div>
   <div class="container hero__inner">
     <div class="hero__text">
       <h1>Bienvenue au Fil des Truffes&nbsp;!</h1>
       <p>Éducatrice canine et pet-sitter dans l'Embrunais</p>
-      {% include "contact-buttons.njk" %}
     </div>
-    <div class="hero__photo">{% image "sirius-montagne.jpeg", "Sirius, le malinois d'Emma, assis dans l'herbe face aux montagnes", "(min-width: 800px) 30rem, 100vw", "", "eager" %}</div>
+    {% include "contact-buttons.njk" %}
   </div>
 </section>
 
