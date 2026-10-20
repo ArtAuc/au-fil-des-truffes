@@ -1,0 +1,18 @@
+---
+layout: page.njk
+title: "Contact"
+description: "Contactez Emma, éducatrice canine et pet-sitter dans l'Embrunais, par téléphone ou par SMS au 06 03 56 62 48."
+permalink: /contact/
+---
+<section class="section section--surface">
+  <div class="container split">
+    <div class="prose">
+      <p class="lead">Merci de me joindre <strong>uniquement</strong> par téléphone ou par SMS au <a href="tel:{{ site.telephone_lien }}"><strong>{{ site.telephone }}</strong></a>, {{ site.horaires }}*.</p>
+      <p class="muted">* Mes prestations pourront évidemment être réalisées en dehors de ces horaires.</p>
+      {% include "contact-buttons.njk" %}
+      <h2 class="contact__zone">Zone d'activité</h2>
+      <p>{{ site.zone | capitalize }}, au départ d'Embrun. Voir les <a href="/prestations-tarifs/#frais-km">frais kilométriques</a>.</p>
+    </div>
+    <div class="split__media">{% image "chien-noir-poils-longs-patte.jpeg", "Chien noir à poils longs qui donne la patte", "(min-width: 800px) 28rem, 100vw" %}</div>
+  </div>
+</section>

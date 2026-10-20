@@ -1,0 +1,16 @@
+{
+  "nom": "Au Fil des Truffes",
+  "activite": "Éducatrice canine et pet-sitter",
+  "url": "https://artauc.github.io",
+  "telephone": "06 03 56 62 48",
+  "telephone_lien": "+33603566248",
+  "horaires": "du lundi au samedi de 9h à 17h",
+  "zone": "l'Embrunais (05 - Hautes-Alpes)",
+  "menu": [
+    { "url": "/", "emoji": "🏠", "titre": "Accueil" },
+    { "url": "/philosophie/", "emoji": "🐾", "titre": "Ma philosophie" },
+    { "url": "/prestations-tarifs/", "emoji": "💶", "titre": "Prestations et tarifs" },
+    { "url": "/conditions-generales/", "emoji": "📄", "titre": "Conditions générales" },
+    { "url": "/contact/", "emoji": "📞", "titre": "Contact" }
+  ]
+}

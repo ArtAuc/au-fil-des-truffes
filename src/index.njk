@@ -1,0 +1,84 @@
+---
+layout: base.njk
+title: "Au Fil des Truffes · Éducatrice canine et pet-sitter dans l'Embrunais"
+description: "Emma, éducatrice canine et pet-sitter dans l'Embrunais (Hautes-Alpes) : éducation et rééducation canine, accompagnement pré-adoption, visites et balades pour vos animaux."
+bodyClass: home
+---
+<section class="hero">
+  <div class="hero__bg">{% image "sirius-montagne.jpeg", "", "100vw", "", "eager" %}</div>
+  <div class="hero__content">
+    <h1>Bienvenue au Fil des Truffes&nbsp;!</h1>
+    <p>Éducation canine et pet-sitting dans l'Embrunais</p>
+    {% set center = true %}{% include "contact-buttons.njk" %}
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container">
+    <div class="prose center about">
+      <h2>À propos de nous</h2>
+      <div class="about__photo">{% image "emma-et-sirius.jpeg", "Emma et son malinois Sirius, en montagne", "(min-width: 800px) 14rem, 30vw" %}</div>
+
+      <p class="lead">Je m'appelle Emma, et je partage ma vie avec Sirius.</p>
+
+      <p>Après <strong>4 années passées aux côtés de centaines de chiens de refuge</strong> en tant qu'agent animalier, j'ai décidé de m'attaquer directement aux origines de la maltraitance et de l'abandon.</p>
+
+      <p>Je propose donc des <strong>cours d'éducation et de rééducation canine</strong>, pour vous permettre de créer ou de retrouver une relation bénéfique et une vie heureuse avec votre chien.</p>
+
+      <p>En parallèle, pour davantage de bien-être au quotidien, et pour que vous puissiez vous absenter l'esprit tranquille, je propose également des <strong>visites et des balades pour vos animaux</strong>, quels qu'ils soient.</p>
+
+      <p>En complément de mon expérience en refuge, je suis titulaire&nbsp;:</p>
+      <ul class="diplomes">
+        <li>de l'ACACED chien, chat et NAC&nbsp;;</li>
+        <li>de l'Attestation d'Aptitude pour les chiens de catégorie 1 et 2&nbsp;;</li>
+        <li>des Premiers Secours canins et félins&nbsp;;</li>
+        <li>du Transport d'Animaux Vivants (TAV)&nbsp;;</li>
+      </ul>
+      <p>et je continue de me former pour vous apporter les meilleurs services possibles.</p>
+
+      <p>Nous sommes actifs dans <strong>l'Embrunais (05 - Hautes-Alpes)</strong>.</p>
+
+      <p>Bonne découverte de mon site et à très vite&nbsp;!</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Mes prestations</h2>
+    <ul class="cards">
+      <li class="card">
+        {% image "chien-noir-harnais-vert.jpeg", "Chien noir en harnais vert, attentif, tenu en longe", "(min-width: 800px) 23rem, 100vw" %}
+        <div class="card__body">
+          <h3>Éducation et rééducation</h3>
+          <p>Bilan comportemental, séances individuelles et séances chiot, en conditions réelles.</p>
+          <a class="card__link" href="/prestations-tarifs/#education">Voir les tarifs →</a>
+        </div>
+      </li>
+      <li class="card">
+        {% image "trois-chiens-jeu-lac.jpeg", "Trois chiens qui jouent dans l'herbe au pied d'une montagne", "(min-width: 800px) 23rem, 100vw" %}
+        <div class="card__body">
+          <h3>Pet-sitting</h3>
+          <p>Visites et balades pour vos animaux pendant vos absences, chez vous.</p>
+          <a class="card__link" href="/prestations-tarifs/#pet-sitting">Voir les tarifs →</a>
+        </div>
+      </li>
+      <li class="card">
+        {% image "chien-griffon-foin.jpeg", "Chien à poils longs gris assis près d'une botte de foin", "(min-width: 800px) 23rem, 100vw" %}
+        <div class="card__body">
+          <h3>Accompagnement pré-adoption</h3>
+          <p>Pour bien choisir le chien qui vous correspond, avant de l'adopter.</p>
+          <a class="card__link" href="/prestations-tarifs/#pre-adoption">Voir les tarifs →</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--accent">
+  <div class="container text-center">
+    <h2>Une question&nbsp;? Un projet pour votre animal&nbsp;?</h2>
+    <p>Joignez-moi par téléphone ou par SMS, {{ site.horaires }}.</p>
+    {% set center = true %}{% include "contact-buttons.njk" %}
+  </div>
+</section>

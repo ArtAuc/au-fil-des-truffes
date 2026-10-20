@@ -1,0 +1,35 @@
+/*
+ * Thème du site : couleurs et polices, et rien d'autre.
+ * Palette PROVISOIRE (vert sapin, beige, ocre) en attendant l'identité visuelle d'Emma :
+ * le jour venu, on ne modifie que ce fichier.
+ */
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/nunito-latin-wght-normal.woff2") format("woff2");
+  font-weight: 200 1000;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  --color-primary: #2f5d46;        /* vert sapin : titres, boutons, liens */
+  --color-primary-dark: #1f4232;   /* survol, pied de page */
+  --color-accent: #c0782f;         /* ocre : prix, mises en avant */
+  --color-accent-soft: #f4e3cc;    /* fond des encadrés */
+  --color-bg: #faf6ef;             /* beige clair : fond de page */
+  --color-surface: #ffffff;        /* cartes, blocs */
+  --color-text: #2b2a26;
+  --color-text-muted: #5f5b52;
+  --color-border: #e4dccd;
+  --color-on-dark: #f5efe3;        /* texte sur fond sombre */
+
+  --font-title: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}

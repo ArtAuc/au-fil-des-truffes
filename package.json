@@ -1,0 +1,14 @@
+{
+  "name": "au-fil-des-truffes",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.7",
+    "@11ty/eleventy-img": "^6.0.4"
+  },
+  "private": "true"
+}

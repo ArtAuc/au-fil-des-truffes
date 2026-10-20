@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.url == "/" %}{{ title }}{% else %}{{ title }} · {{ site.nom }}{% endif %}</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="{{ page.url | htmlBaseUrl(site.url) }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="{{ site.nom }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="{{ page.url | htmlBaseUrl(site.url) }}">
+  <meta property="og:image" content="{{ '/og-image.jpeg' | htmlBaseUrl(site.url) }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/fonts/nunito-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body class="{{ bodyClass }}">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" hidden>
+      <span class="menu-toggle__icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+
+    {# Logo provisoire : à remplacer par le SVG/PNG définitif #}
+    <a class="logo" href="/" aria-label="{{ site.nom }}, accueil">
+      <span class="logo__paw" aria-hidden="true">🐾</span>
+      <span class="logo__name">Au Fil<br>des Truffes</span>
+    </a>
+
+    <nav id="menu" class="site-nav" aria-label="Menu principal">
+      <ul>
+        {%- for item in site.menu %}
+        <li><a href="{{ item.url }}"{% if item.url == page.url %} aria-current="page"{% endif %}><span aria-hidden="true">{{ item.emoji }}</span> {{ item.titre }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <p class="site-footer__name">{{ site.nom }}</p>
+        <p>{{ site.activite }}<br>Dans {{ site.zone }}</p>
+      </div>
+      <div>
+        <p><a class="site-footer__phone" href="tel:{{ site.telephone_lien }}">📞 {{ site.telephone }}</a></p>
+        <p>Appel ou SMS uniquement,<br>{{ site.horaires }}</p>
+      </div>
+      <ul class="site-footer__links">
+        <li><a href="/conditions-generales/">Conditions générales de service</a></li>
+        <li><a href="/mentions-legales/">Mentions légales</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  {# Barre d'appel toujours visible sur mobile : le téléphone est le seul canal de contact #}
+  <div class="call-bar">
+    <a class="call-bar__btn" href="tel:{{ site.telephone_lien }}">📞 Appeler</a>
+    <a class="call-bar__btn call-bar__btn--alt" href="sms:{{ site.telephone_lien }}">💬 SMS</a>
+  </div>
+
+  <script>
+    // Menu ☰ sur mobile. Sans JavaScript, le menu reste affiché en entier.
+    (function () {
+      var button = document.querySelector(".menu-toggle");
+      var nav = document.getElementById("menu");
+      button.hidden = false;
+      document.documentElement.classList.add("js");
+      function setOpen(open) {
+        button.setAttribute("aria-expanded", String(open));
+        nav.classList.toggle("is-open", open);
+      }
+      button.addEventListener("click", function () {
+        setOpen(button.getAttribute("aria-expanded") !== "true");
+      });
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && nav.classList.contains("is-open")) {
+          setOpen(false);
+          button.focus();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
