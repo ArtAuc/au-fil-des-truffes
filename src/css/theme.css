@@ -21,7 +21,7 @@
 :root {
   --color-primary: #2f5d46;        /* vert sapin : titres, boutons, liens */
   --color-primary-dark: #1f4232;   /* survol, pied de page */
-  --color-accent: #c0782f;         /* ocre : prix, mises en avant */
+  --color-accent: #94561b;         /* ocre : prix, mises en avant */
   --color-accent-soft: #f4e3cc;    /* fond des encadrés */
   --color-bg: #faf6ef;             /* beige clair : fond de page */
   --color-surface: #ffffff;        /* cartes, blocs */

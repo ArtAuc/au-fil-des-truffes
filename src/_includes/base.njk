@@ -17,7 +17,6 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/fonts/nunito-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/theme.css">
   <link rel="stylesheet" href="/css/main.css">
@@ -33,7 +32,6 @@
 
     {# Logo provisoire : à remplacer par le SVG/PNG définitif #}
     <a class="logo" href="/" aria-label="{{ site.nom }}, accueil">
-      <span class="logo__paw" aria-hidden="true">🐾</span>
       <span class="logo__name">Au Fil<br>des Truffes</span>
     </a>
 
@@ -57,7 +55,7 @@
         <p>{{ site.activite }}<br>Dans {{ site.zone }}</p>
       </div>
       <div>
-        <p><a class="site-footer__phone" href="tel:{{ site.telephone_lien }}">📞 {{ site.telephone }}</a></p>
+        <p><a class="site-footer__phone" href="tel:{{ site.telephone_lien }}">{{ site.telephone }}</a></p>
         <p>Appel ou SMS uniquement,<br>{{ site.horaires }}</p>
       </div>
       <ul class="site-footer__links">
@@ -69,8 +67,8 @@
 
   {# Barre d'appel toujours visible sur mobile : le téléphone est le seul canal de contact #}
   <div class="call-bar">
-    <a class="call-bar__btn" href="tel:{{ site.telephone_lien }}">📞 Appeler</a>
-    <a class="call-bar__btn call-bar__btn--alt" href="sms:{{ site.telephone_lien }}">💬 SMS</a>
+    <a class="call-bar__btn" href="tel:{{ site.telephone_lien }}">Appeler</a>
+    <a class="call-bar__btn call-bar__btn--alt" href="sms:{{ site.telephone_lien }}">SMS</a>
   </div>
 
   <script>

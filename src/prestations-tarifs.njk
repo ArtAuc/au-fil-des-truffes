@@ -1,7 +1,6 @@
 ---
 layout: page.njk
 title: "Prestations et tarifs"
-subtitle: "Éducation et rééducation canine, pet-sitting, frais kilométriques"
 description: "Tarifs d'Emma, éducatrice canine et pet-sitter dans l'Embrunais : bilan comportemental, séances individuelles et chiot, accompagnement pré-adoption, visites et balades."
 permalink: /prestations-tarifs/
 ---
@@ -11,42 +10,40 @@ permalink: /prestations-tarifs/
 <section class="section section--surface">
   <div class="container prose center">
     <h2>Tarifs en un coup d'œil</h2>
-    <div class="table-wrap">
-      <table class="recap">
-        <thead>
-          <tr><th scope="col">Prestation</th><th scope="col" class="recap__duree">Durée</th><th scope="col">Tarif</th></tr>
-        </thead>
-        <tbody>
-          {%- for p in tarifs.education %}
-          <tr>
-            <td><a href="#{{ p.id }}">{{ p.nom }}</a></td>
-            <td class="recap__duree">{{ p.duree }}</td>
-            <td class="price">{{ p.prix | prix }}</td>
-          </tr>
-          {%- endfor %}
-          <tr>
-            <td><a href="#visites">Visite (pet-sitting)</a></td>
-            <td class="recap__duree">dès 30 min</td>
-            <td class="price">dès {{ tarifs.visites | pluck("prix") | min | prix }}</td>
-          </tr>
-          <tr>
-            <td><a href="#balades">Balade (pet-sitting)</a></td>
-            <td class="recap__duree">dès 30 min</td>
-            <td class="price">dès {{ tarifs.balades | pluck("prix") | min | prix }}</td>
-          </tr>
-          <tr>
-            <td><a href="#formules">Formule visite + balade</a></td>
-            <td class="recap__duree">dès 1h</td>
-            <td class="price">dès {{ tarifs.formules | pluck("prix") | min | prix }}</td>
-          </tr>
-          <tr>
-            <td><a href="#frais-km">Frais kilométriques</a></td>
-            <td class="recap__duree">aller-retour</td>
-            <td class="price">selon distance</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <table class="recap">
+      <thead>
+        <tr><th scope="col">Prestation</th><th scope="col" class="recap__duree">Durée</th><th scope="col">Tarif</th></tr>
+      </thead>
+      <tbody>
+        {%- for p in tarifs.education %}
+        <tr>
+          <td><a href="#{{ p.id }}">{{ p.nom }}</a></td>
+          <td class="recap__duree">{{ p.duree }}</td>
+          <td class="price">{{ p.prix | prix }}</td>
+        </tr>
+        {%- endfor %}
+        <tr>
+          <td><a href="#visites">Visite (pet-sitting)</a></td>
+          <td class="recap__duree">dès 30 min</td>
+          <td class="price">dès {{ tarifs.visites | pluck("prix") | min | prix }}</td>
+        </tr>
+        <tr>
+          <td><a href="#balades">Balade (pet-sitting)</a></td>
+          <td class="recap__duree">dès 30 min</td>
+          <td class="price">dès {{ tarifs.balades | pluck("prix") | min | prix }}</td>
+        </tr>
+        <tr>
+          <td><a href="#formules">Formule visite + balade</a></td>
+          <td class="recap__duree">dès 1h</td>
+          <td class="price">dès {{ tarifs.formules | pluck("prix") | min | prix }}</td>
+        </tr>
+        <tr>
+          <td><a href="#frais-km">Frais kilométriques</a></td>
+          <td class="recap__duree">aller-retour</td>
+          <td class="price">selon distance</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
@@ -54,11 +51,11 @@ permalink: /prestations-tarifs/
   <div class="container prose center">
     <h2>Éducation et rééducation</h2>
     {%- for p in tarifs.education %}
-    <article class="price-card" id="{{ p.id }}">
-      <div class="price-card__head">
+    <article class="offer" id="{{ p.id }}">
+      <header class="offer__head">
         <h3>{{ p.nom }}</h3>
-        <p class="price-card__meta"><span class="price-card__duree">⏱ {{ p.duree }}</span> <span class="price">{{ p.prix | prix }}</span></p>
-      </div>
+        <p class="offer__meta">{{ p.duree }} · <span class="price">{{ p.prix | prix }}</span></p>
+      </header>
       {% include "prestations/" + p.id + ".njk" %}
     </article>
     {%- endfor %}
@@ -69,15 +66,14 @@ permalink: /prestations-tarifs/
   <div class="container prose center">
     <h2>Pet-sitting</h2>
 
-    <p class="callout callout--strong">⚠️ Je ne propose pas de garde à mon domicile.</p>
-
-    <ul>
+    <ul class="conditions">
+      <li><strong>Je ne propose pas de garde à mon domicile.</strong></li>
       <li>Majoration de <strong>+{{ majoration }}&nbsp;%</strong> les jours fériés et dimanches (hors frais kilométriques).</li>
       <li>Rencontre <strong>obligatoire, gratuite et sans engagement</strong> avant le début des prestations de pet-sitting.</li>
     </ul>
 
     <div class="tables">
-      <div id="visites" class="price-card">
+      <div id="visites" class="price-block">
         <h3>Visites</h3>
         <p class="table-caption">Chats, NAC, animaux ne nécessitant pas de balade</p>
         <table>
@@ -90,7 +86,7 @@ permalink: /prestations-tarifs/
         </table>
       </div>
 
-      <div id="balades" class="price-card">
+      <div id="balades" class="price-block">
         <h3>Balades</h3>
         <table>
           <thead><tr><th scope="col">Durée</th><th scope="col">Tarif</th></tr></thead>
@@ -100,33 +96,30 @@ permalink: /prestations-tarifs/
             {%- endfor %}
           </tbody>
         </table>
+        <p class="table-note"><strong>{{ tarifs.fidelite.balades_achetees }} balades achetées = {{ tarifs.fidelite.offert }}</strong></p>
       </div>
     </div>
 
-    <p class="callout">🎁 <strong>{{ tarifs.fidelite.balades_achetees }} balades achetées = {{ tarifs.fidelite.offert }}</strong></p>
-
-    <div id="formules" class="price-card">
+    <div id="formules" class="price-block">
       <h3>Formules visite + balade</h3>
-      <div class="table-wrap">
-        <table class="formules">
-          <thead>
-            <tr><th scope="col">Formule</th><th scope="col">Durée totale</th><th scope="col" class="repartition">Répartition</th><th scope="col">Tarif</th></tr>
-          </thead>
-          <tbody>
-            {%- for f in tarifs.formules %}
-            <tr>
-              <td><strong>{{ f.nom }}</strong></td>
-              <td>{{ f.duree }}<small>{{ f.repartition }}</small></td>
-              <td class="repartition">{{ f.repartition }}</td>
-              <td class="price">{{ f.prix | prix }}</td>
-            </tr>
-            {%- endfor %}
-          </tbody>
-        </table>
-      </div>
+      <table class="formules">
+        <thead>
+          <tr><th scope="col">Formule</th><th scope="col">Durée totale</th><th scope="col" class="repartition">Répartition</th><th scope="col">Tarif</th></tr>
+        </thead>
+        <tbody>
+          {%- for f in tarifs.formules %}
+          <tr>
+            <td>{{ f.nom }}</td>
+            <td>{{ f.duree }}<small>{{ f.repartition }}</small></td>
+            <td class="repartition">{{ f.repartition }}</td>
+            <td class="price">{{ f.prix | prix }}</td>
+          </tr>
+          {%- endfor %}
+        </tbody>
+      </table>
     </div>
 
-    <p class="muted"><em>Pour toute demande spécifique, n'hésitez pas à <a href="/contact/">me contacter</a> pour en discuter&nbsp;!</em></p>
+    <p><em>Pour toute demande spécifique, n'hésitez pas à <a href="/contact/">me contacter</a> pour en discuter&nbsp;!</em></p>
   </div>
 </section>
 
@@ -145,10 +138,4 @@ permalink: /prestations-tarifs/
   </div>
 </section>
 
-<section class="section section--accent">
-  <div class="container text-center">
-    <h2>Envie de commencer&nbsp;?</h2>
-    <p>Contactez-moi par téléphone ou par SMS, {{ site.horaires }}.</p>
-    {% set center = true %}{% include "contact-buttons.njk" %}
-  </div>
-</section>
+{% include "contact-section.njk" %}

@@ -8,8 +8,8 @@ async function image(src, alt, sizes = "100vw", className = "", loading = "lazy"
     formats: ["webp", "jpeg"],
     outputDir: "_site/img/",
     urlPath: "/img/",
-    sharpWebpOptions: { quality: 72 },
-    sharpJpegOptions: { quality: 75, progressive: true },
+    sharpWebpOptions: { quality: 85 },
+    sharpJpegOptions: { quality: 85, progressive: true },
   });
   return Image.generateHTML(metadata, {
     alt,
@@ -34,7 +34,6 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/fonts");
-  eleventyConfig.addPassthroughCopy("src/favicon.svg");
   eleventyConfig.addPassthroughCopy("src/og-image.jpeg");
 
   eleventyConfig.addShortcode("image", image);
