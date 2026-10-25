@@ -20,5 +20,5 @@ npm start          # http://localhost:8080
 - `src/css/theme.css` : couleurs et polices (palette provisoire), seul fichier à modifier quand l'identité visuelle arrive.
 - `src/_data/site.json` : nom, téléphone, horaires, menu.
 - `src/images/` : photos d'origine, redimensionnées en WebP + JPEG au build.
-- Le logo est provisoire (`base.njk`, `favicon.svg`).
+- Le logo est provisoire (`base.njk`). Pas de favicon en attendant le vrai logo (`<link rel="icon" href="data:,">` évite la requête 404).
 - `.github/workflows/deploy.yml` : construit à chaque push et publie sur Pages, seulement si le dépôt est public.
