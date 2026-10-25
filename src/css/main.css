@@ -296,7 +296,7 @@ strong {
 }
 
 .page-hero {
-  padding-block: clamp(2rem, 5vw, 3rem) 0;
+  padding-block: clamp(2rem, 5vw, 3rem) clamp(1.25rem, 3vw, 2rem);
 }
 
 .page-hero h1 {
@@ -377,6 +377,18 @@ strong {
   color: var(--color-primary-dark);
 }
 
+a[href^="tel:"] {
+  white-space: nowrap;
+}
+
+/* Sur ordinateur, un lien tel: ou sms: ne mène souvent nulle part :
+   on affiche le numéro plutôt que des boutons */
+@media (hover: hover) and (pointer: fine) {
+  .contact-buttons {
+    display: none;
+  }
+}
+
 /* ---------- Accueil ---------- */
 
 /* Bannière pleine largeur. Le texte se place dans le ciel, jamais sur Sirius :
@@ -437,6 +449,21 @@ strong {
   color: #fff;
 }
 
+.hero__phone {
+  display: none;
+  margin: 1.5rem 0 0;
+  font-weight: 700;
+  text-shadow: 0 1px 8px rgb(0 0 0 / 0.4);
+}
+
+.hero__phone a {
+  display: block;
+  color: #fff;
+  font-size: 1.75em;
+  font-weight: 800;
+  text-decoration: none;
+}
+
 .hero .btn:hover {
   background: var(--color-on-dark);
   border-color: var(--color-on-dark);
@@ -457,18 +484,29 @@ strong {
     background: linear-gradient(to left, rgb(0 0 0 / 0.4), rgb(0 0 0 / 0) 55%);
   }
 
+  /* Le bloc de texte se centre dans le ciel, à droite de Sirius */
   .hero__inner {
-    align-items: flex-end;
+    flex: 1;
+    width: auto;
+    align-items: center;
     padding-block: 3rem;
+    padding-inline: min(58%, 100% - 27rem - 3vw) 3vw;
   }
 
   .hero__text,
-  .hero .btn-row {
+  .hero .btn-row,
+  .hero__phone {
     width: min(100%, 27rem);
   }
 
   .hero .btn-row {
     margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 800px) and (hover: hover) and (pointer: fine) {
+  .hero__phone {
+    display: block;
   }
 }
 
@@ -802,4 +840,54 @@ thead th {
   * {
     transition: none !important;
   }
+}
+
+/* ---------- Contact ---------- */
+
+.contact__zone {
+  margin-top: 2.5rem;
+}
+
+/* ---------- Conditions générales ---------- */
+
+.cgs-infos {
+  padding-left: 1.2em;
+}
+
+.toc ol {
+  padding-left: 1.6em;
+  columns: 2 18rem;
+  column-gap: 2rem;
+}
+
+.toc li {
+  margin-bottom: 0.35em;
+  break-inside: avoid;
+}
+
+.cgs article {
+  scroll-margin-top: 1rem;
+}
+
+.cgs article + article {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.cgs h2 {
+  margin-top: 0;
+}
+
+.cgs h3 {
+  margin: 1.75rem 0 0.5rem;
+}
+
+.cgs ul {
+  padding-left: 1.2em;
+}
+
+.back-top {
+  margin: 1.5rem 0 0;
+  font-size: 0.9em;
 }

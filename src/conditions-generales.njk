@@ -4,10 +4,306 @@ title: "Conditions générales de service"
 description: "Conditions générales de service d'Au Fil des Truffes, éducation canine et pet-sitting dans l'Embrunais."
 permalink: /conditions-generales/
 ---
-{# Provisoire : Emma rédige le texte. Prévoir ensuite des articles numérotés, un sommaire (.toc) et un lien « retour en haut ». #}
+{# Texte d'Emma (references/cgs/cgs-au-fil-des-truffes.pdf), repris sans réécriture.
+   Retirés pour le web : l'IBAN, la ligne SIREN/SIRET encore vide et le bloc de signature.
+   Téléphone, majoration et frais kilométriques viennent de _data/. #}
+{%- set majoration = tarifs.majoration_dimanche_ferie_pourcent -%}
 <section class="section section--surface">
   <div class="container prose center">
-    <p class="lead">Les conditions générales de service sont en cours de rédaction.</p>
-    <p>Pour toute question sur le déroulement des prestations, n'hésitez pas à me contacter par téléphone ou par SMS au <a href="tel:{{ site.telephone_lien }}">{{ site.telephone }}</a>.</p>
+    <h2 id="prestataire">Informations sur le prestataire</h2>
+    <ul class="cgs-infos">
+      <li>Nom commercial&nbsp;: {{ site.nom }}</li>
+      <li>Nom et prénom du prestataire&nbsp;: Emma Gremaud</li>
+      <li>Statut juridique&nbsp;: couveuse d'entreprise</li>
+      <li>Adresse professionnelle&nbsp;: le petit serre, 05200 St André d'Embrun</li>
+      <li>Téléphone&nbsp;: <a href="tel:{{ site.telephone_lien }}">{{ site.telephone }}</a></li>
+      <li>Adresse électronique&nbsp;: <a href="mailto:aufildestruffes@gmail.com">aufildestruffes@gmail.com</a></li>
+      <li>Assurance responsabilité civile professionnelle&nbsp;: GAN Assurances (05000 Gap)</li>
+      <li>Date d'entrée en vigueur&nbsp;: 01/11/2026</li>
+    </ul>
+
+    <nav class="toc" aria-labelledby="sommaire">
+      <h2 id="sommaire">Sommaire</h2>
+      <ol>
+        <li><a href="#article-1">Objet et champ d'application</a></li>
+        <li><a href="#article-2">Réservation et formation du contrat</a></li>
+        <li><a href="#article-3">Description des prestations</a></li>
+        <li><a href="#article-4">Engagements du client</a></li>
+        <li><a href="#article-5">Chiens réactifs et chiens catégorisés</a></li>
+        <li><a href="#article-6">Tarifs et frais de déplacement</a></li>
+        <li><a href="#article-7">Paiement</a></li>
+        <li><a href="#article-8">Annulation, report et retard</a></li>
+        <li><a href="#article-9">Santé et urgences vétérinaires</a></li>
+        <li><a href="#article-10">Responsabilité et assurance</a></li>
+        <li><a href="#article-11">Accès au domicile et remise des clés</a></li>
+        <li><a href="#article-12">Droit de rétractation</a></li>
+        <li><a href="#article-13">Réclamations et médiation de la consommation</a></li>
+        <li><a href="#article-14">Données personnelles</a></li>
+        <li><a href="#article-15">Photographies et communication</a></li>
+        <li><a href="#article-16">Force majeure et événements exceptionnels</a></li>
+        <li><a href="#article-17">Modification des CGS</a></li>
+        <li><a href="#article-18">Droit applicable et litiges</a></li>
+        <li><a href="#article-19">Acceptation des conditions générales</a></li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container prose center cgs">
+    <article id="article-1">
+      <h2>Article 1 – Objet et champ d'application</h2>
+      <p>Les présentes conditions générales de services, ci-après dénommées «&nbsp;CGS&nbsp;», définissent les modalités selon lesquelles Au Fil des Truffes, ci-après dénommé «&nbsp;le Prestataire&nbsp;», propose à ses clients particuliers des prestations de pet sitting et d'éducation canine.</p>
+      <p>Les prestations peuvent notamment comprendre&nbsp;:</p>
+      <ul>
+        <li>les visites à domicile pour les animaux de compagnie (chiens, chats, NAC, animaux de ferme)</li>
+        <li>les promenades de chiens</li>
+        <li>les soins courants et les actes de confort convenus avec le propriétaire</li>
+        <li>les séances individuelles d'éducation canine</li>
+        <li>les accompagnements pré-adoption</li>
+        <li>les séances réalisées au domicile du client ou en extérieur</li>
+      </ul>
+      <p>Les caractéristiques précises de chaque prestation, sa durée, son prix, son lieu d'exécution et les éventuelles conditions particulières sont communiqués au client avant la réservation.</p>
+      <p>Les présentes CGS s'appliquent aux prestations réalisées auprès de consommateurs particuliers. Elles complètent le devis et / ou le contrat individuel.</p>
+      <p>En cas de contradiction, les conditions particulières acceptées lors de la signature du contrat individuel ou du devis prévalent sur les CGS, sous réserve des dispositions légales impératives.</p>
+      <p class="back-top"><a href="#sommaire">Retour au sommaire</a></p>
+    </article>
+
+    <article id="article-2">
+      <h2>Article 2 – Réservation et formation du contrat</h2>
+      <p>Toute demande de prestation doit être effectuée par téléphone ou par SMS. La demande du client ne vaut pas confirmation automatique de disponibilité.</p>
+      <p>La réservation devient ferme lorsque le Prestataire a confirmé la prestation, après avoir recueilli les informations nécessaires concernant l'animal, les conditions d'intervention, le lieu et les dates convenues. La signature d'un devis ou d'un contrat individuel vaut également réservation ferme.</p>
+      <p>Le Prestataire peut demander un entretien préalable, une rencontre avec l'animal ou une évaluation de ses besoins avant d'accepter la prestation, notamment en présence de comportements réactifs, de difficultés de manipulation ou de contraintes particulières de sécurité.</p>
+      <p>Le client s'engage à communiquer des informations exactes et complètes. Toute modification significative concernant l'animal, son état de santé, son comportement ou les conditions d'intervention doit être signalée avant le début de la prestation.</p>
+      <p class="back-top"><a href="#sommaire">Retour au sommaire</a></p>
+    </article>
+
+    <article id="article-3">
+      <h2>Article 3 – Description des prestations</h2>
+      <h3>3.1. Visites à domicile</h3>
+      <p>Les visites peuvent comprendre, selon ce qui a été convenu&nbsp;:</p>
+      <ul>
+        <li>la distribution de nourriture et d'eau</li>
+        <li>le nettoyage courant des espaces utilisés par l'animal</li>
+        <li>les interactions, jeux et activités adaptés</li>
+        <li>les sorties hygiéniques lorsque cela est prévu</li>
+        <li>la surveillance générale du bien-être de l'animal</li>
+        <li>la transmission d'informations au propriétaire après la visite</li>
+      </ul>
+      <p>La durée de la visite et les tâches incluses sont précisées lors de la réservation.</p>
+      <p>Sauf accord écrit spécifique et dans la limite des compétences du Prestataire, les visites ne comprennent pas d'actes vétérinaires, de diagnostic, de traitement médical spécialisé ni de soins nécessitant une qualification particulière.</p>
+
+      <h3>3.2. Promenades de chiens</h3>
+      <p>Les promenades sont adaptées autant que possible à l'âge, à la condition physique, aux capacités et au comportement du chien.</p>
+      <p>Le client indique les habitudes de promenade, les équipements utilisés, les éventuelles difficultés de comportement, les réactions envers les humains ou les animaux ainsi que les consignes de sécurité nécessaires.</p>
+      <p>Le Prestataire choisit un parcours et des conditions de sortie adaptés à la situation. Il peut modifier ou interrompre une promenade si les conditions deviennent incompatibles avec la sécurité de l'animal, des tiers ou du Prestataire.</p>
+      <p>Le port d'un équipement de sécurité adapté peut être exigé (muselière, harnais, GPS, etc).</p>
+      <p>Les chiens ne sont pas laissés en liberté lorsque les circonstances, les règles applicables ou l'évaluation du risque ne le permettent pas.</p>
+
+      <h3>3.3. Chats et autres animaux</h3>
+      <p>Les prestations concernant les chats et autres animaux de compagnie sont définies au cas par cas, selon les besoins de l'animal et les compétences du Prestataire.</p>
+      <p>Le client fournit les consignes relatives à l'alimentation, à l'entretien, à l'environnement, aux habitudes et aux précautions particulières.</p>
+      <p>Les prestations ne constituent pas un service vétérinaire et ne comprennent pas d'actes médicaux non autorisés.</p>
+
+      <h3>3.4. Éducation canine</h3>
+      <p>Les séances d'éducation canine ont pour objectif d'accompagner le propriétaire dans l'apprentissage de comportements adaptés et dans l'amélioration de la relation avec son chien.</p>
+      <p>Le contenu des séances est individualisé selon les besoins identifiés, le contexte de vie, les capacités d'apprentissage du chien et les objectifs convenus. Le Prestataire peut proposer des exercices à réaliser entre les séances.</p>
+      <p>Les résultats dépendent notamment de la régularité de la pratique, de l'environnement, de l'état de santé de l'animal et de l'implication du propriétaire. Le Prestataire est tenu de mettre en œuvre des moyens professionnels adaptés, mais ne garantit pas un résultat comportemental déterminé ni un délai précis de progression.</p>
+      <p>Le Prestataire peut refuser ou interrompre un exercice s'il estime que les conditions de sécurité ou de bien-être ne sont pas réunies.</p>
+      <p>Les séances d'éducation ne remplacent pas une consultation vétérinaire. En cas de suspicion de douleur, de trouble médical ou de situation nécessitant une prise en charge spécialisée, le Prestataire pourra recommander au propriétaire de consulter un vétérinaire ou un professionnel compétent.</p>
+      <p class="back-top"><a href="#sommaire">Retour au sommaire</a></p>
+    </article>
+
+    <article id="article-4">
+      <h2>Article 4 – Engagements du client</h2>
+      <p>Le client s'engage à&nbsp;:</p>
+      <ul>
+        <li>fournir des informations sincères sur l'identité, l'âge, l'état de santé, les antécédents et le comportement de son animal</li>
+        <li>signaler les morsures antérieures, tentatives de morsure, fugues, réactions aux congénères, peurs, comportements de prédation ou difficultés de manipulation connus</li>
+        <li>informer le Prestataire des traitements, allergies, restrictions alimentaires et précautions utiles</li>
+        <li>remettre du matériel adapté et en bon état lorsque celui-ci est nécessaire</li>
+        <li>fournir les coordonnées permettant de le joindre pendant la prestation, ainsi que celles d'une personne de confiance si nécessaire</li>
+        <li>transmettre les coordonnées du vétérinaire habituel et les consignes à suivre en cas d'urgence</li>
+        <li>remettre les clés, codes d'accès et instructions nécessaires en temps utile</li>
+        <li>s'assurer que l'animal peut être pris en charge dans des conditions conformes à la réglementation applicable</li>
+        <li>régler les prestations et frais convenus selon les modalités prévues.</li>
+      </ul>
+      <p>Le client reste responsable de l'exactitude des informations communiquées et de la mise à disposition d'un environnement permettant une intervention dans des conditions raisonnables de sécurité.</p>
+      <p>Le Prestataire peut refuser une intervention ou proposer des modalités différentes si les informations transmises sont insuffisantes ou si les conditions réelles présentent un risque non raisonnablement maîtrisable.</p>
+      <p class="back-top"><a href="#sommaire">Retour au sommaire</a></p>
+    </article>
+
+    <article id="article-5">
+      <h2>Article 5 – Chiens réactifs et chiens catégorisés</h2>
+      <h3>5.1. Acceptation sous conditions</h3>
+      <p>Le Prestataire peut accepter, après étude préalable, des chiens présentant des comportements réactifs ainsi que des chiens relevant de la première ou de la deuxième catégorie au sens de la réglementation française.</p>
+      <p>Cette acceptation n'est pas automatique. Elle dépend notamment du comportement observé, du contexte d'intervention, des moyens de sécurité disponibles, des obligations légales applicables et de la couverture d'assurance du Prestataire.</p>
+      <p>Le client doit déclarer avant toute réservation les comportements connus du chien et, pour un chien catégorisé, sa catégorie réglementaire ainsi que les documents et justificatifs nécessaires.</p>
+
+      <h3>5.2. Documents et obligations légales</h3>
+      <p>Pour les chiens soumis à une réglementation particulière, le client doit fournir les justificatifs suivants&nbsp;: documents relatifs à l'identification, à la vaccination antirabique, à l'évaluation comportementale, à l'assurance et au permis de détention (et preuve de stérilisation si Cat 1).</p>
+      <p>Le propriétaire demeure responsable du respect des obligations qui lui incombent légalement.</p>
+      <p>Le Prestataire vérifie les éléments nécessaires à son intervention et peut refuser celle-ci si les conditions légales ne sont pas réunies.</p>
+      <p>Aucune prestation ne sera réalisée dans des conditions contraires aux interdictions ou restrictions légales applicables à la catégorie du chien, à son transport, à son accès aux lieux publics ou à sa détention.</p>
+
+      <h3>5.3. Sécurité et adaptation de la prestation</h3>
+      <p>Pour un chien réactif ou catégorisé, le Prestataire peut exiger une rencontre préalable, un équipement adapté, des consignes écrites et des modalités spécifiques de prise en charge.</p>
+      <p>Il peut refuser une manipulation, une mise en présence ou une sortie qu'il estime dangereuse ou juridiquement interdite.</p>
+      <p>L'acceptation d'un chien ne constitue ni une garantie d'absence d'incident ni une exonération de responsabilité pour l'une ou l'autre des parties.</p>
+      <p class="back-top"><a href="#sommaire">Retour au sommaire</a></p>
+    </article>
+
+    <article id="article-6">
+      <h2>Article 6 – Tarifs et frais de déplacement</h2>
+      <p>Les tarifs applicables sont communiqués au client avant la réservation et figurent, selon le cas, sur un devis, une grille tarifaire ou une confirmation écrite. Les prix sont exprimés en euros.</p>
+
+      <h3>6.1. Frais kilométriques</h3>
+      <p>Des frais de déplacement peuvent être facturés en supplément du prix de la prestation. Les modalités retenues sont les suivantes&nbsp;:</p>
+      <ul>
+        <li>Point de départ du calcul&nbsp;: Embrun</li>
+        <li>Frais kilométriques applicables pour un aller/retour&nbsp;:
+          <ul>
+            {%- for k in tarifs.frais_km %}{% if k.prix != null %}
+            <li>{{ k.distance }}&nbsp;: {{ k.prix | prix | lower }}</li>
+            {%- endif %}{% endfor %}
+          </ul>
+        </li>
+      </ul>
+      <p>Le montant estimé des frais de déplacement est communiqué au client avant la confirmation de la réservation. Toute modification significative est portée à sa connaissance avant d'être facturée.</p>
+      <p>Aucun frais supplémentaire non convenu ne sera ajouté, sauf accord ultérieur du client ou situation dans laquelle la facturation est légalement justifiée.</p>
+
+      <h3>6.2. Modification des tarifs</h3>
+      <p>Le Prestataire peut modifier ses tarifs pour les réservations futures. Les prestations déjà confirmées restent facturées au tarif accepté, sauf accord du client sur une modification ou application d'une disposition contractuelle licite.</p>
+      <p class="back-top"><a href="#sommaire">Retour au sommaire</a></p>
+    </article>
+
+    <article id="article-7">
+      <h2>Article 7 – Paiement</h2>
+      <p>Le paiement est dû dans un délai de 48h après la réalisation de la prestation.</p>
+      <p>Les moyens de paiement acceptés sont les suivants&nbsp;: chèque, espèces ou virement.</p>
+      <p>En cas de prestation régulière, un paiement hebdomadaire ou mensualisé pourra être convenu avec le client.</p>
+      <p>Pour une prestation dont la durée excède 15 jours consécutifs, un acompte de 50% du montant total de la prestation (frais kilométriques inclus) devra être versé avant le début de celle-ci.</p>
+      <p>Les jours fériés travaillés seront majorés à hauteur de {{ majoration }}% (hors frais kilométriques).</p>
+      <p>À la fin de la prestation, une facture ou un justificatif de paiement est remis au client conformément aux obligations légales applicables.</p>
+      <p>Aucune pénalité forfaitaire, indemnité de recouvrement ou frais de retard non autorisé par la réglementation applicable ne pourra être exigé d'un client consommateur.</p>
+      <p class="back-top"><a href="#sommaire">Retour au sommaire</a></p>
+    </article>
+
+    <article id="article-8">
+      <h2>Article 8 – Annulation, report et retard</h2>
+      <h3>8.1. Annulation par le client</h3>
+      <p>Le client peut annuler ou demander le report d'une prestation en informant le Prestataire par écrit.</p>
+      <p>Le délai d'annulation retenu est de 12 heures avant l'heure prévue de la prestation. Au bout de trois annulations non justifiées moins de 12h avant le début de la prestation, le Prestataire se réserve le droit de refuser ou d'annuler les prestations futures.</p>
+      <p>Les règles légales relatives au droit de rétractation, lorsqu'il s'applique, restent distinctes de la présente politique d'annulation.</p>
+
+      <h3>8.2. Annulation ou interruption par le Prestataire</h3>
+      <p>Le Prestataire peut reporter ou interrompre une prestation lorsqu'un événement imprévisible, un problème de santé, une impossibilité d'accès, un danger pour l'animal ou les personnes, ou une contrainte légale empêche son exécution dans des conditions acceptables.</p>
+      <p>Il informe le client dès que possible et recherche, lorsque cela est raisonnablement possible, une solution de remplacement.</p>
+      <p>Toute somme encaissée au titre d'une prestation non réalisée est remboursée, sauf disposition légale ou accord licite différent applicable à la situation.</p>
+
+      <h3>8.3. Retards</h3>
+      <p>Le client doit être disponible à l'heure convenue lorsque sa présence est nécessaire. Tout retard du client pourra avoir des conséquences sur la durée de la prestation.</p>
+      <p class="back-top"><a href="#sommaire">Retour au sommaire</a></p>
+    </article>
+
+    <article id="article-9">
+      <h2>Article 9 – Santé et urgences vétérinaires</h2>
+      <p>Le client communique les informations nécessaires relatives à la santé de son animal, notamment ses traitements, allergies, restrictions et coordonnées vétérinaires. Il fournit, lorsque cela est utile, les médicaments prescrits ainsi que les ordonnances du vétérinaire.</p>
+      <p>L'administration de médicaments n'est effectuée que si elle a été expressément convenue, qu'elle est compatible avec les compétences et obligations du Prestataire et qu'elle peut être réalisée en sécurité.</p>
+      <p>En cas d'urgence ou de suspicion de souffrance nécessitant une intervention rapide, le Prestataire tente de joindre le client puis son contact d'urgence. Si la situation le justifie et que le client demeure injoignable, il peut contacter un vétérinaire ou les services appropriés dans la mesure nécessaire à la protection de l'animal.</p>
+      <p>Les décisions médicales relèvent du vétérinaire. Les soins et frais vétérinaires engagés pour l'animal sont à la charge du propriétaire, sauf s'ils résultent d'une responsabilité légalement imputable au Prestataire.</p>
+      <p class="back-top"><a href="#sommaire">Retour au sommaire</a></p>
+    </article>
+
+    <article id="article-10">
+      <h2>Article 10 – Responsabilité et assurance</h2>
+      <p>Chaque partie répond des dommages dont elle est légalement responsable.</p>
+      <p>Le Prestataire s'engage à exécuter les prestations convenues avec le soin et la diligence raisonnablement attendus d'un professionnel, dans le respect des règles applicables et des informations portées à sa connaissance.</p>
+      <p>Le client demeure responsable des obligations qui lui incombent en qualité de propriétaire ou de détenteur de l'animal, sous réserve des règles légales relatives à la garde et à la responsabilité.</p>
+      <p>Le Prestataire ne peut être tenu responsable d'un événement qui ne lui est pas légalement imputable. Il ne peut toutefois exclure à l'avance sa responsabilité lorsqu'elle est engagée en application de la loi, ni supprimer les droits impératifs du consommateur.</p>
+      <p>En cas d'incident, les parties s'engagent à communiquer les informations utiles et à coopérer raisonnablement pour en déterminer les circonstances.</p>
+      <p>Le Prestataire déclare disposer d'une assurance responsabilité civile professionnelle adaptée aux activités effectivement exercées. Les informations relatives à cette assurance sont communiquées sur demande.</p>
+      <p class="back-top"><a href="#sommaire">Retour au sommaire</a></p>
+    </article>
+
+    <article id="article-11">
+      <h2>Article 11 – Accès au domicile et remise des clés</h2>
+      <p>Lorsque la prestation se déroule au domicile du client, celui-ci fournit les moyens d'accès nécessaires et s'assure que les instructions sont exactes.</p>
+      <p>Les clés, badges et codes d'accès sont utilisés uniquement pour les besoins de la prestation et conservés avec des précautions raisonnables. Le Prestataire s'engage à ne pas communiquer les informations d'accès à des tiers non autorisés et à restituer les clés selon les modalités convenues.</p>
+      <p>Le client indique les pièces accessibles, les consignes de fermeture et les éventuelles particularités du logement utiles à l'intervention.</p>
+      <p>Toute perte de clé, difficulté d'accès ou anomalie constatée doit être signalée dès que possible à l'autre partie.</p>
+      <p class="back-top"><a href="#sommaire">Retour au sommaire</a></p>
+    </article>
+
+    <article id="article-12">
+      <h2>Article 12 – Droit de rétractation</h2>
+      <p>Après l'acceptation de la prestation ou la signature du devis ou du contrat individuel, le Propriétaire dispose d'un droit de rétractation de 14 jours, conformément aux dispositions du Code de la consommation.</p>
+      <p>Si le client souhaite que la prestation commence avant la fin du délai de rétractation, le Prestataire recueille les demandes et consentements exprès requis par la loi et communique les informations nécessaires concernant les conséquences d'une rétractation après commencement du service.</p>
+      <p class="back-top"><a href="#sommaire">Retour au sommaire</a></p>
+    </article>
+
+    <article id="article-13">
+      <h2>Article 13 – Réclamations et médiation de la consommation</h2>
+      <p>Toute réclamation peut être adressée au Prestataire aux coordonnées suivantes&nbsp;:</p>
+      <ul>
+        <li>Courrier électronique&nbsp;: <a href="mailto:aufildestruffes@gmail.com">aufildestruffes@gmail.com</a></li>
+        <li>Adresse postale&nbsp;: le petit serre, 05200 St André d'Embrun</li>
+      </ul>
+      <p>Le Prestataire s'efforce de répondre aux réclamations dans un délai raisonnable et de rechercher une solution amiable.</p>
+      <p>Conformément aux dispositions applicables, le Propriétaire peut recourir gratuitement au médiateur de la consommation dont relève le Prestataire, après avoir adressé une réclamation écrite préalable qui n'a pas permis de résoudre le différend.</p>
+      <ul>
+        <li>Médiateur de la consommation désigné&nbsp;: Société de la Médiation Professionnelle (SMP)</li>
+        <li>Adresse postale&nbsp;: Alteritae, 5 rue Salvaing, 12000 Rodez</li>
+        <li>Site internet&nbsp;: <a href="https://www.mediateur-consommation-smp.fr/">www.mediateur-consommation-smp.fr</a></li>
+      </ul>
+      <p class="back-top"><a href="#sommaire">Retour au sommaire</a></p>
+    </article>
+
+    <article id="article-14">
+      <h2>Article 14 – Données personnelles</h2>
+      <p>Le Prestataire utilise les données personnelles du client dans la mesure nécessaire à la gestion des demandes, des réservations, des paiements, des prestations et du suivi de la relation contractuelle.</p>
+      <p>Les informations concernant l'animal et les consignes de sécurité sont utilisées uniquement dans la mesure nécessaire à l'exécution des prestations et au respect des obligations applicables.</p>
+      <p>Les données ne sont pas conservées au-delà de la durée nécessaire aux finalités poursuivies, sous réserve des durées légales de conservation, notamment comptables.</p>
+      <p>Le client peut exercer les droits que lui reconnaît la réglementation relative aux données personnelles en contactant&nbsp;: <a href="mailto:aufildestruffes@gmail.com">aufildestruffes@gmail.com</a></p>
+      <p class="back-top"><a href="#sommaire">Retour au sommaire</a></p>
+    </article>
+
+    <article id="article-15">
+      <h2>Article 15 – Photographies et communication</h2>
+      <p>Aucune photographie, vidéo ou information permettant d'identifier le client, son domicile ou sa vie privée ne sera utilisée à des fins de communication commerciale sans le consentement préalable du client.</p>
+      <p>L'autorisation d'utiliser l'image de l'animal sur les réseaux sociaux ou les supports de communication du Prestataire sera recueillie lors de la signature du contrat individuel. Le refus de cette autorisation n'affecte pas l'accès aux prestations.</p>
+      <p class="back-top"><a href="#sommaire">Retour au sommaire</a></p>
+    </article>
+
+    <article id="article-16">
+      <h2>Article 16 – Force majeure et événements exceptionnels</h2>
+      <p>Aucune partie ne sera tenue responsable d'un manquement directement causé par un événement répondant aux conditions légales de la force majeure.</p>
+      <p>La partie concernée informe l'autre dès que possible et prend des mesures raisonnables pour limiter les conséquences de l'événement.</p>
+      <p>Les parties recherchent une solution adaptée à la situation, notamment un report, une adaptation de la prestation ou, lorsque cela est justifié, le remboursement des sommes correspondant à une prestation non exécutée.</p>
+      <p class="back-top"><a href="#sommaire">Retour au sommaire</a></p>
+    </article>
+
+    <article id="article-17">
+      <h2>Article 17 – Modification des CGS</h2>
+      <p>Le Prestataire peut modifier les présentes CGS pour les nouvelles réservations, notamment en cas d'évolution de son activité, de ses tarifs ou de la réglementation.</p>
+      <p>Les CGS applicables à une prestation sont celles communiquées et acceptées lors de la conclusion du contrat, sauf accord ultérieur valable des parties ou application d'une disposition légale.</p>
+      <p>Toute modification substantielle des conditions d'une prestation déjà confirmée doit être portée à la connaissance du client et ne peut lui être imposée en dehors des conditions prévues par la loi.</p>
+      <p class="back-top"><a href="#sommaire">Retour au sommaire</a></p>
+    </article>
+
+    <article id="article-18">
+      <h2>Article 18 – Droit applicable et litiges</h2>
+      <p>Les présentes CGS sont soumises au droit français, sous réserve des dispositions impératives applicables.</p>
+      <p>En cas de différend, les parties privilégient une tentative de résolution amiable.</p>
+      <p>Le consommateur conserve la possibilité de saisir les juridictions compétentes conformément aux règles légales applicables.</p>
+      <p>Aucune stipulation des présentes CGS ne peut priver le consommateur d'un droit qui lui est reconnu par une disposition impérative.</p>
+      <p class="back-top"><a href="#sommaire">Retour au sommaire</a></p>
+    </article>
+
+    <article id="article-19">
+      <h2>Article 19 – Acceptation des conditions générales</h2>
+      <p>Le client reconnaît avoir pu prendre connaissance des présentes CGS avant la conclusion du contrat et avoir reçu les informations essentielles relatives à la prestation, à son prix, à sa durée, aux frais éventuels et aux conditions d'annulation.</p>
+      <p class="back-top"><a href="#sommaire">Retour au sommaire</a></p>
+    </article>
   </div>
 </section>

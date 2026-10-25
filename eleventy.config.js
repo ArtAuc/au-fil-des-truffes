@@ -4,7 +4,7 @@ import Image from "@11ty/eleventy-img";
 // Photos : redimensionnées et converties (WebP + JPEG de secours) au build.
 async function image(src, alt, sizes = "100vw", className = "", loading = "lazy") {
   const metadata = await Image(`src/images/${src}`, {
-    widths: [400, 800, 1200],
+    widths: [400, 800, 1200, 1600, 2400],
     formats: ["webp", "jpeg"],
     outputDir: "_site/img/",
     urlPath: "/img/",
@@ -40,6 +40,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("prix", prix);
   eleventyConfig.addFilter("min", (values) => Math.min(...values));
   eleventyConfig.addFilter("pluck", (items, key) => items.map((item) => item[key]));
+  // « l'Embrunais » → « L'Embrunais » (le filtre capitalize passe le reste en minuscules)
+  eleventyConfig.addFilter("majuscule", (text) => text.charAt(0).toUpperCase() + text.slice(1));
 
   return {
     dir: { input: "src" },

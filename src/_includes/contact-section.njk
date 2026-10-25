@@ -1,7 +1,7 @@
 <section class="section section--accent">
   <div class="container prose center">
     <h2>Contact</h2>
-    <p>Merci de me joindre <strong>uniquement</strong> par téléphone ou par SMS au <strong>{{ site.telephone }}</strong>, {{ site.horaires }}.</p>
+    <p>Merci de me joindre <strong>uniquement</strong> par téléphone ou par SMS au <a href="tel:{{ site.telephone_lien }}"><strong>{{ site.telephone }}</strong></a>, {{ site.horaires }}.</p>
     {% include "contact-buttons.njk" %}
   </div>
 </section>

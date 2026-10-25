@@ -12,6 +12,10 @@ bodyClass: home
       <p>Éducatrice canine et pet-sitter dans l'Embrunais</p>
     </div>
     {% include "contact-buttons.njk" %}
+    <p class="hero__phone">
+      <a href="tel:{{ site.telephone_lien }}">{{ site.telephone }}</a>
+      Appel ou SMS, {{ site.horaires }}
+    </p>
   </div>
 </section>
 
