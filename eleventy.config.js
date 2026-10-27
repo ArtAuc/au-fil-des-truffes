@@ -31,6 +31,8 @@ function prix(value) {
 export default function (eleventyConfig) {
   // Le préfixe (/au-fil-des-truffes/) n'est utile que sur artauc.github.io, avant le domaine.
   eleventyConfig.addPlugin(HtmlBasePlugin);
+  // Adresse publique, pour les liens absolus (canonical, Open Graph, sitemap). Fournie par le workflow.
+  eleventyConfig.addGlobalData("siteUrl", process.env.SITE_URL || "http://localhost:8080");
 
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/fonts");

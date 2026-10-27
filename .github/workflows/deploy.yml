@@ -17,6 +17,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Variable du dépôt DOMAINE (Settings → Secrets and variables → Actions → Variables) :
+    # vide → artauc.github.io/<dépôt>/ ; « aufildestruffes.fr » → site servi sur le domaine.
+    env:
+      DOMAINE: ${{ vars.DOMAINE }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -24,10 +28,18 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      # À retirer (avec site.json → url) quand le domaine sera branché.
+      - name: Adresse du site
+        run: |
+          if [ -n "$DOMAINE" ]; then
+            echo "SITE_URL=https://$DOMAINE" >> "$GITHUB_ENV"
+            echo "PATH_PREFIX=/" >> "$GITHUB_ENV"
+          else
+            echo "SITE_URL=https://${GITHUB_REPOSITORY_OWNER,,}.github.io" >> "$GITHUB_ENV"
+            echo "PATH_PREFIX=/${{ github.event.repository.name }}/" >> "$GITHUB_ENV"
+          fi
       - run: npx @11ty/eleventy
-        env:
-          PATH_PREFIX: /${{ github.event.repository.name }}/
+      - if: env.DOMAINE != ''
+        run: echo "$DOMAINE" > _site/CNAME
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
