@@ -5,16 +5,17 @@ description: "Conditions générales de service d'Au Fil des Truffes, éducation
 permalink: /conditions-generales/
 ---
 {# Texte d'Emma (references/cgs/cgs-au-fil-des-truffes.pdf, version du 27/10/2026), repris sans réécriture.
-   Retirés pour le web : l'IBAN, la ligne SIREN/SIRET encore vide et le bloc de signature.
+   Retiré pour le web : le bloc de signature. RIB, SIRET et statut ajoutés à la demande d'Emma (28/10).
    Téléphone, majoration et frais kilométriques viennent de _data/. #}
-{%- set majoration = tarifs.majoration_dimanche_ferie_pourcent -%}
+{%- set majoration = tarifs.majoration_ferie_pourcent -%}
 <section class="section section--surface">
   <div class="container prose center">
     <h2 id="prestataire">Informations sur le prestataire</h2>
     <ul class="cgs-infos">
       <li>Nom commercial&nbsp;: {{ site.nom }}</li>
       <li>Nom et prénom du prestataire&nbsp;: Emma Gremaud</li>
-      <li>Statut juridique&nbsp;: couveuse d'entreprise</li>
+      <li>Statut juridique&nbsp;: titulaire d'un CAPE chez ACTIVIE, couveuse d'entreprises, bâtiment la Bérardie, rue Belle Aureille, Micropolis, 05000 Gap</li>
+      <li>SIRET&nbsp;: {{ site.siret }}</li>
       <li>Adresse professionnelle&nbsp;: le petit serre, 05200 St André d'Embrun</li>
       <li>Téléphone&nbsp;: <a href="tel:{{ site.telephone_lien }}">{{ site.telephone }}</a></li>
       <li>Adresse électronique&nbsp;: <a href="mailto:aufildestruffes@gmail.com">aufildestruffes@gmail.com</a></li>
@@ -180,7 +181,7 @@ permalink: /conditions-generales/
     <article id="article-7">
       <h2>Article 7 – Paiement</h2>
       <p>Le paiement est dû dès la fin des prestations ou le cas échéant, dans un délai maximal de 48h après la réalisation de la prestation.</p>
-      <p>Les moyens de paiement acceptés sont les suivants&nbsp;: chèque, espèces ou virement.</p>
+      <p>Les moyens de paiement acceptés sont les suivants&nbsp;: chèque (à l'ordre d'Activie), espèces ou virement (RIB&nbsp;: FR76&nbsp;1130&nbsp;6000&nbsp;6248&nbsp;1867&nbsp;4090&nbsp;741 / BIC&nbsp;: AGRIFRPP813).</p>
       <p>En cas de prestation régulière, un paiement hebdomadaire ou mensualisé pourra être convenu avec le client.</p>
       <p>Pour toute prestation de pet-sitting, un acompte par chèque du montant total de la prestation (frais kilométriques inclus) devra être fourni avant le début de celle-ci, lors de la signature du contrat individuel. Cet acompte sera encaissé une fois la prestation effectuée en intégralité.</p>
       <p>Les jours fériés travaillés seront majorés à hauteur de {{ majoration }}% (hors frais kilométriques).</p>

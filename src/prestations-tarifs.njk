@@ -5,7 +5,7 @@ description: "Tarifs d'Emma, éducatrice canine et pet-sitter dans l'Embrunais :
 permalink: /prestations-tarifs/
 ---
 {# Tous les prix viennent de _data/tarifs.json : ne jamais en écrire ici. #}
-{%- set majoration = tarifs.majoration_dimanche_ferie_pourcent -%}
+{%- set majoration = tarifs.majoration_ferie_pourcent -%}
 
 <section class="section section--surface">
   <div class="container prose center">
@@ -66,12 +66,6 @@ permalink: /prestations-tarifs/
   <div class="container prose center">
     <h2>Pet-sitting</h2>
 
-    <ul class="conditions">
-      <li><strong>Je ne propose pas de garde à mon domicile.</strong></li>
-      <li>Majoration de <strong>+{{ majoration }}&nbsp;%</strong> les jours fériés et dimanches (hors frais kilométriques).</li>
-      <li>Rencontre <strong>obligatoire, gratuite et sans engagement</strong> avant le début des prestations de pet-sitting.</li>
-    </ul>
-
     <div class="tables">
       <div id="visites" class="price-block">
         <h3>Visites</h3>
@@ -96,7 +90,6 @@ permalink: /prestations-tarifs/
             {%- endfor %}
           </tbody>
         </table>
-        <p class="table-note"><strong>{{ tarifs.fidelite.balades_achetees }} balades achetées = {{ tarifs.fidelite.offert }}</strong></p>
       </div>
     </div>
 
@@ -135,6 +128,14 @@ permalink: /prestations-tarifs/
         {%- endfor %}
       </tbody>
     </table>
+
+    {# Texte d'Emma (retours du 28/10) #}
+    <ul class="conditions">
+      <li><strong>Je ne propose pas de garde à mon domicile.</strong></li>
+      <li>Rencontre <strong>gratuite, obligatoire et sans engagement</strong> avant le début des prestations de pet-sitting.</li>
+      <li>Majoration de <strong>{{ majoration }}&nbsp;%</strong> les jours fériés (hors frais kilométriques).</li>
+      <li>Un <strong>acompte (chèque)</strong> du montant total de la prestation (frais kilométriques inclus) devra être fourni avant le début de cette dernière.</li>
+    </ul>
   </div>
 </section>
 

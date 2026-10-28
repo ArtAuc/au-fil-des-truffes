@@ -17,8 +17,6 @@
     { "duree": "1h30", "prix": 24 }
   ],
 
-  "fidelite": { "balades_achetees": 10, "offert": "1 balade d'1h offerte" },
-
   "formules": [
     { "nom": "Formule 1", "duree": "1h", "repartition": "2 × 30 min", "prix": 22 },
     { "nom": "Formule 2", "duree": "1h30", "repartition": "1h + 30 min, ou 3 × 30 min", "prix": 27 },
@@ -26,7 +24,7 @@
     { "nom": "Formule 4", "duree": "2h30", "repartition": "2 × 1h + 30 min, ou 2 × 30 min + 1h30", "prix": 42 }
   ],
 
-  "majoration_dimanche_ferie_pourcent": 30,
+  "majoration_ferie_pourcent": 30,
 
   "_frais_km": "prix 0 = « Offert », prix null = « Sur devis »",
   "frais_km": [

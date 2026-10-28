@@ -58,7 +58,8 @@
       </div>
       <div>
         <p><a class="site-footer__phone" href="tel:{{ site.telephone_lien }}">{{ site.telephone }}</a></p>
-        <p>Appel ou SMS uniquement,<br>{{ site.horaires }}</p>
+        <p>Appel ou SMS,<br>{{ site.horaires }}</p>
+        <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
       </div>
       <ul class="site-footer__links">
         <li><a href="/conditions-generales/">Conditions générales de service</a></li>
@@ -67,7 +68,7 @@
     </div>
   </footer>
 
-  {# Barre d'appel toujours visible sur mobile : le téléphone est le seul canal de contact #}
+  {# Barre d'appel toujours visible sur mobile : le téléphone est le canal de contact principal #}
   <div class="call-bar">
     <a class="call-bar__btn" href="tel:{{ site.telephone_lien }}">Appeler</a>
     <a class="call-bar__btn call-bar__btn--alt" href="sms:{{ site.telephone_lien }}">SMS</a>

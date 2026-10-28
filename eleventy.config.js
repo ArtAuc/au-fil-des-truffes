@@ -37,6 +37,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/fonts");
   eleventyConfig.addPassthroughCopy("src/og-image.jpeg");
+  eleventyConfig.addPassthroughCopy("src/documents");
 
   eleventyConfig.addShortcode("image", image);
   eleventyConfig.addFilter("prix", prix);
