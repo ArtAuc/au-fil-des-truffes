@@ -668,7 +668,7 @@ a[href^="tel:"] {
 }
 
 .conditions {
-  margin: 2rem 0 0;
+  margin: 0;
   padding-left: 1.2em;
 }
 
@@ -721,10 +721,6 @@ thead th {
   margin: -0.25rem 0 0.75rem;
   color: var(--color-text-muted);
   font-style: italic;
-}
-
-.table-note {
-  margin: 0.75rem 0 0;
 }
 
 .tables {
