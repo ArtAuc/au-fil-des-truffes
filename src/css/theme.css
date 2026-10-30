@@ -58,7 +58,7 @@
   --color-button: #88937b;         /* vert sauge : boutons */
   --color-on-button: #4c362d;
   --color-bg: #f1efe6;             /* beige : fond de page */
-  --color-surface: #f1efe6;        /* même beige : le fond reste uni */
+  --color-surface: color-mix(in srgb, #f1efe6 92%, #4c362d); /* beige assombri de brun : une section sur deux */
   --color-text: #4c362d;
   --color-text-muted: #6f5b51;
   --color-border: #dad5c6;

@@ -303,13 +303,6 @@ strong {
   margin: 0;
 }
 
-/* Fond uni : sans changement de couleur, deux marges qui se suivent s'additionnaient.
-   Seul le bloc contact, sur fond sauge, garde les siennes. */
-.page-hero + .section,
-.section:not(.section--accent) + .section:not(.section--accent) {
-  padding-top: 0;
-}
-
 .page-hero p {
   margin: 0.5rem 0 0;
 }
