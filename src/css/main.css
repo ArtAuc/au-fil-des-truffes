@@ -90,6 +90,10 @@ strong {
   white-space: nowrap;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .skip-link {
   position: absolute;
   left: 1rem;
@@ -336,6 +340,11 @@ strong {
   .split__media img {
     aspect-ratio: 4 / 3;
   }
+}
+
+/* Photos en portrait recadrées en paysage : la tête du chien est haute dans l'image */
+.cadre-haut {
+  object-position: 50% 30%;
 }
 
 /* Photo recadrée en paysage dans sa source : pas de recadrage portrait */
@@ -692,6 +701,7 @@ thead th {
 .tables {
   display: grid;
   gap: 0 2.5rem;
+  margin-top: 1.5rem;
 }
 
 @media (min-width: 700px) {

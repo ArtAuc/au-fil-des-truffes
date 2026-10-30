@@ -18,7 +18,7 @@ narrow: true
       <tbody>
         {%- for p in tarifs.education %}
         <tr>
-          <td><a href="#{{ p.id }}">{{ p.nom }}</a></td>
+          <td><a href="#{{ p.id }}">{{ p.nom | insecable | safe }}</a></td>
           <td class="recap__duree">{{ p.duree }}</td>
           <td class="price">{{ p.prix | prix }}</td>
         </tr>
@@ -40,7 +40,7 @@ narrow: true
         </tr>
         <tr>
           <td><a href="#frais-km">Frais kilométriques</a></td>
-          <td class="recap__duree">aller-retour</td>
+          <td class="recap__duree"><span class="nowrap">aller-retour</span></td>
           <td class="price">selon distance</td>
         </tr>
       </tbody>
@@ -54,7 +54,7 @@ narrow: true
     {%- for p in tarifs.education %}
     <article class="offer" id="{{ p.id }}">
       <header class="offer__head">
-        <h3>{{ p.nom }}</h3>
+        <h3>{{ p.nom | insecable | safe }}</h3>
         <p class="offer__meta">{{ p.duree }} · <span class="price">{{ p.prix | prix }}</span></p>
       </header>
       {% include "prestations/" + p.id + ".njk" %}
@@ -120,7 +120,7 @@ narrow: true
 <section class="section" id="frais-km">
   <div class="container prose center">
     <h2>Frais kilométriques</h2>
-    <p>Calculés au départ d'Embrun, pour un aller-retour.</p>
+    <p>Calculés au départ d'Embrun, pour un <span class="nowrap">aller-retour</span>.</p>
     <table>
       <thead><tr><th scope="col">Distance</th><th scope="col">Frais</th></tr></thead>
       <tbody>

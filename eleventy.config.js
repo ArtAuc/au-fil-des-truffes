@@ -20,6 +20,15 @@ async function image(src, alt, sizes = "100vw", className = "", loading = "lazy"
   });
 }
 
+// « pré-adoption », « 6 mois » : ni coupés au trait d'union, ni séparés en fin de ligne
+function insecable(text) {
+  return String(text)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/(\d) /g, "$1\u00a0")
+    .replace(/\p{L}+(?:-\p{L}+)+/gu, '<span class="nowrap">$&</span>');
+}
+
 // 13 → « 13 € », 0 → « Offert », null → « Sur devis »
 function prix(value) {
   if (value === null || value === undefined) return "Sur devis";
@@ -44,6 +53,7 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addShortcode("image", image);
   eleventyConfig.addFilter("prix", prix);
+  eleventyConfig.addFilter("insecable", insecable);
   eleventyConfig.addFilter("min", (values) => Math.min(...values));
   eleventyConfig.addFilter("pluck", (items, key) => items.map((item) => item[key]));
 
