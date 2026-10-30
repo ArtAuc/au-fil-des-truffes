@@ -57,6 +57,18 @@ h3 {
   margin: 1.6em 0 0.5em;
 }
 
+/* Titres des parties et des prestations d'éducation en gras (demande d'Emma, 30/10) */
+main h2,
+.offer h3 {
+  font-weight: 700;
+}
+
+/* Titres des parties et des prestations d'éducation en gras (demande d'Emma, 30/10) */
+main h2,
+.offer h3 {
+  font-weight: 700;
+}
+
 p,
 ul,
 ol {
@@ -286,8 +298,10 @@ strong {
   background: var(--color-surface);
 }
 
-.section--accent {
-  background: var(--color-accent-soft);
+/* Fond uni : sans changement de couleur, deux marges qui se suivent s'additionneraient */
+.page-hero + .section,
+.section + .section {
+  padding-top: 0;
 }
 
 .lead {
@@ -345,6 +359,11 @@ strong {
 /* Photos en portrait recadrées en paysage : la tête du chien est haute dans l'image */
 .cadre-haut {
   object-position: 50% 30%;
+}
+
+/* Photo montrée en entier, sans recadrage (le chien qui donne la patte) */
+.split__media img.photo-entiere {
+  aspect-ratio: auto;
 }
 
 /* Photo recadrée en paysage dans sa source : pas de recadrage portrait */

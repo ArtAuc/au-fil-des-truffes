@@ -54,11 +54,10 @@
   --color-primary: #4c362d;        /* brun : titres, liens, filets */
   --color-primary-dark: #4c362d;   /* pied de page */
   --color-accent: #a46447;         /* terracotta : prix, mises en avant, survol des liens */
-  --color-accent-soft: #dcddd1;    /* sauge très clair : fond des encadrés */
   --color-button: #88937b;         /* vert sauge : boutons */
   --color-on-button: #4c362d;
   --color-bg: #f1efe6;             /* beige : fond de page */
-  --color-surface: color-mix(in srgb, #f1efe6 92%, #4c362d); /* beige assombri de brun : une section sur deux */
+  --color-surface: #f1efe6;        /* même beige : seules les couleurs de la charte, fond uni */
   --color-text: #4c362d;
   --color-text-muted: #6f5b51;
   --color-border: #dad5c6;
