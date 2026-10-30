@@ -2,7 +2,8 @@
 layout: base.njk
 ---
 <div class="page-hero">
-  <div class="container">
+  {# narrow : le titre s'aligne sur la colonne de texte des pages en .prose.center #}
+  <div class="container{% if narrow %} prose center{% endif %}">
     <h1>{{ title }}</h1>
     {% if subtitle %}<p>{{ subtitle }}</p>{% endif %}
   </div>

@@ -261,6 +261,11 @@ strong {
   max-width: 65ch;
 }
 
+/* Un titre qui suit du texte dans le même bloc : plus d'air au-dessus qu'en dessous */
+.prose > :where(* + h2, * + .toc) {
+  margin-top: 2.5rem;
+}
+
 .center {
   margin-inline: auto;
 }
@@ -693,6 +698,22 @@ thead th {
   .tables {
     grid-template-columns: 1fr 1fr;
   }
+
+  /* Titres et tableaux alignés d'une colonne à l'autre, même si une seule a une légende */
+  .tables .price-block {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+  }
+
+  .tables .price-block > table {
+    grid-row: 3;
+    align-self: start;
+  }
+}
+
+.formules td:first-child {
+  white-space: nowrap;
 }
 
 .formules td:nth-child(3) {
