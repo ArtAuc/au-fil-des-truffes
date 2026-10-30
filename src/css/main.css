@@ -323,10 +323,9 @@ strong {
   align-items: center;
 }
 
+/* Photos à côté du texte : toujours entières, jamais recadrées */
 .split__media img {
   width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
   border-radius: 0.375rem;
 }
 
@@ -345,25 +344,9 @@ strong {
   }
 }
 
-@media (max-width: 799px) {
-  .split__media img {
-    aspect-ratio: 4 / 3;
-  }
-}
-
 /* Photos en portrait recadrées en paysage : la tête du chien est haute dans l'image */
 .cadre-haut {
   object-position: 50% 30%;
-}
-
-/* Photo montrée en entier, sans recadrage (le chien qui donne la patte) */
-.split__media img.photo-entiere {
-  aspect-ratio: auto;
-}
-
-/* Photo recadrée en paysage dans sa source : pas de recadrage portrait */
-.split__media--paysage img {
-  aspect-ratio: 4 / 3;
 }
 
 /* ---------- Boutons ---------- */
@@ -557,7 +540,7 @@ a[href^="tel:"] {
 .about__photo img {
   aspect-ratio: 1;
   object-fit: cover;
-  object-position: 50% 62%;
+  object-position: 50% 85%; /* le museau et la langue de Sirius restent dans le cercle */
   border-radius: 50%;
 }
 
