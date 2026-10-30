@@ -117,21 +117,17 @@ strong {
   border-bottom: 1px solid var(--color-border);
 }
 
-/* Logo horizontal de la charte */
+/* Logo horizontal de la charte, centré : sur mobile il laisse
+   la largeur du bouton ☰ libre de chaque côté */
 .logo {
   display: block;
-  width: clamp(12rem, 62vw, 16rem);
+  width: min(16rem, 100% - 7rem);
 }
 
 .logo img {
   display: block;
   width: 100%;
   height: auto;
-}
-
-/* Sur mobile, le logo se décale pour laisser la place au bouton ☰ */
-.menu-toggle:not([hidden]) + .logo {
-  margin-left: 3.5rem;
 }
 
 .site-nav ul {
