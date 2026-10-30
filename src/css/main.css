@@ -117,22 +117,67 @@ strong {
   border-bottom: 1px solid var(--color-border);
 }
 
-/* Logo provisoire : un simple cercle avec le nom, en attendant le vrai */
+/* Logo : le cercle de la charte, le nom à côté et l'activité dessous, entre deux filets */
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 6rem;
-  height: 6rem;
-  border-radius: 50%;
-  border: 2px solid var(--color-primary);
+  gap: 0.75rem;
   color: var(--color-primary);
+  text-decoration: none;
+}
+
+.logo__mark {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+/* Sur mobile, le logo se décale pour laisser la place au bouton ☰ */
+.menu-toggle:not([hidden]) + .logo {
+  margin-left: 3.5rem;
+}
+
+.logo__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo__name {
   font-family: var(--font-title);
   font-weight: 400;
-  font-size: 0.9rem;
-  line-height: 1.15;
-  text-align: center;
-  text-decoration: none;
+  font-size: 1.4rem;
+  line-height: 1.1;
+}
+
+.logo__tagline {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-accent);
+  font-size: 0.65rem;
+  white-space: nowrap;
+}
+
+@media (min-width: 600px) {
+  .logo__mark {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .logo__name {
+    font-size: 1.6rem;
+  }
+
+  .logo__tagline {
+    font-size: 0.7rem;
+  }
+
+  .logo__tagline::before,
+  .logo__tagline::after {
+    content: "";
+    width: 1rem;
+    border-top: 1px solid currentColor;
+  }
 }
 
 .site-nav ul {
@@ -250,10 +295,17 @@ strong {
     display: none;
   }
 
-  .logo {
-    width: 7rem;
-    height: 7rem;
-    font-size: 1rem;
+  .logo__mark {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .logo__name {
+    font-size: 2rem;
+  }
+
+  .logo__tagline {
+    font-size: 0.8rem;
   }
 }
 

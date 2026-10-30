@@ -38,6 +38,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/fonts");
   eleventyConfig.addPassthroughCopy("src/og-image.jpeg");
   eleventyConfig.addPassthroughCopy("src/documents");
+  eleventyConfig.addPassthroughCopy("src/logo");
+  eleventyConfig.addPassthroughCopy("src/favicon.svg");
+  eleventyConfig.addPassthroughCopy("src/apple-touch-icon.png");
 
   eleventyConfig.addShortcode("image", image);
   eleventyConfig.addFilter("prix", prix);
