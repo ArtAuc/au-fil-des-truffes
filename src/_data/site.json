@@ -9,10 +9,10 @@
   "horaires": "du lundi au samedi de 9h à 17h",
   "zone": "l'Embrunais (05 - Hautes-Alpes)",
   "menu": [
-    { "url": "/", "emoji": "🏠", "titre": "Accueil" },
-    { "url": "/philosophie/", "emoji": "🐾", "titre": "Ma philosophie" },
-    { "url": "/prestations-tarifs/", "emoji": "💶", "titre": "Prestations et tarifs" },
-    { "url": "/conditions-generales/", "emoji": "📄", "titre": "Conditions générales" },
-    { "url": "/contact/", "emoji": "📞", "titre": "Contact" }
+    { "url": "/", "titre": "Accueil" },
+    { "url": "/philosophie/", "titre": "Ma philosophie" },
+    { "url": "/prestations-tarifs/", "titre": "Prestations et tarifs" },
+    { "url": "/conditions-generales/", "titre": "Conditions générales" },
+    { "url": "/contact/", "titre": "Contact" }
   ]
 }

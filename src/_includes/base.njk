@@ -40,7 +40,7 @@
     <nav id="menu" class="site-nav" aria-label="Menu principal">
       <ul>
         {%- for item in site.menu %}
-        <li><a href="{{ item.url }}"{% if item.url == page.url %} aria-current="page"{% endif %}><span aria-hidden="true">{{ item.emoji }}</span> {{ item.titre }}</a></li>
+        <li><a href="{{ item.url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.titre }}</a></li>
         {%- endfor %}
       </ul>
     </nav>
