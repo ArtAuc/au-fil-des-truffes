@@ -260,7 +260,7 @@ strong {
 /* ---------- Structure ---------- */
 
 .container {
-  width: min(100% - 2rem, 72rem);
+  width: min(100% - clamp(2rem, 8vw, 5rem), 72rem);
   margin-inline: auto;
 }
 
@@ -472,13 +472,14 @@ a[href^="tel:"] {
     background: linear-gradient(to left, rgb(0 0 0 / 0.4), rgb(0 0 0 / 0) 55%);
   }
 
-  /* Le bloc de texte se centre dans le ciel, à droite de Sirius */
+  /* Le bloc de texte se centre dans le ciel, à droite de Sirius,
+     sans jamais déborder sur sa tête (tablettes comprises) */
   .hero__inner {
     flex: 1;
     width: auto;
     align-items: center;
     padding-block: 3rem;
-    padding-inline: min(58%, 100% - 27rem - 3vw) 3vw;
+    padding-inline: 58% 3vw;
   }
 
   .hero__text,
@@ -749,7 +750,7 @@ thead th {
 .site-footer__inner {
   display: grid;
   gap: 1.5rem;
-  width: min(100% - 2rem, 72rem);
+  width: min(100% - clamp(2rem, 8vw, 5rem), 72rem);
   margin-inline: auto;
 }
 
