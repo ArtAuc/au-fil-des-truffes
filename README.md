@@ -17,7 +17,7 @@ npm start          # http://localhost:8080
 
 ## Repères
 
-- `src/css/theme.css` : couleurs et polices (palette provisoire), seul fichier à modifier quand l'identité visuelle arrive.
+- `src/css/theme.css` : couleurs et polices de la charte d'Emma (30/10).
 - `src/_data/site.json` : nom, téléphone, horaires, menu.
 - `src/images/` : photos d'origine, redimensionnées en WebP + JPEG au build.
 - Le logo est provisoire (`base.njk`). Pas de favicon en attendant le vrai logo (`<link rel="icon" href="data:,">` évite la requête 404).

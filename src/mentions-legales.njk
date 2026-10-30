@@ -4,27 +4,40 @@ title: "Mentions légales"
 description: "Mentions légales du site Au Fil des Truffes."
 permalink: /mentions-legales/
 ---
-{# Informations reprises des CGS d'Emma. #}
+{# Texte d'Emma (references/mentions-legales/mentions-legales.pdf, 30/10/2026), repris sans réécriture.
+   Ajouté : la directrice de la publication (obligatoire). Téléphone, e-mail et SIRET viennent de _data/site.json. #}
 <section class="section section--surface">
   <div class="container prose center">
-    <h2>Éditrice du site</h2>
-    <p>{{ site.nom }}, {{ site.activite | lower }}<br>
-    Emma Gremaud, titulaire d'un CAPE chez ACTIVIE, couveuse d'entreprises (05000 Gap)<br>
-    SIRET&nbsp;: {{ site.siret }}<br>
-    Le petit serre, 05200 St André d'Embrun<br>
-    Téléphone&nbsp;: <a href="tel:{{ site.telephone_lien }}">{{ site.telephone }}</a><br>
-    E-mail&nbsp;: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    <h2>1. Éditeur du site</h2>
+    <p>Le présent site internet est édité sous le nom commercial <strong>{{ site.nom }}</strong>, proposant des prestations de (ré)éducation canine et de pet sitting.</p>
+    <p>L'activité est exercée dans le cadre d'un Contrat d'appui au projet d'entreprise (CAPE), avec la couveuse d'entreprises <strong>ACTIVIE</strong>.</p>
+    <p><strong>Structure d'accompagnement&nbsp;:</strong><br>
+    ACTIVIE<br>
+    Bâtiment La Bérardie<br>
+    Rue Belle Aureille – Micropolis<br>
+    05000 GAP, France</p>
+    <p>SIRET de la structure porteuse&nbsp;: {{ site.siret }}</p>
+    <p><strong>Contact de l'activité&nbsp;:</strong><br>
+    E-mail&nbsp;: <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+    Téléphone&nbsp;: <a href="tel:{{ site.telephone_lien }}">{{ site.telephone }}</a></p>
     <p>Directrice de la publication&nbsp;: Emma Gremaud</p>
 
-    <h2>Hébergement</h2>
+    <h2>2. Hébergement du site</h2>
+    <p>Le site est hébergé par&nbsp;:</p>
     <p>GitHub, Inc. (GitHub Pages)<br>
     88 Colin P. Kelly Jr. St, San Francisco, CA 94107, États-Unis<br>
     <a href="https://github.com">github.com</a></p>
 
-    <h2>Données personnelles et cookies</h2>
-    <p>Ce site ne dépose aucun cookie, n'utilise aucun outil de mesure d'audience et ne collecte aucune donnée personnelle.</p>
+    <h2>3. Propriété intellectuelle</h2>
+    <p>L'ensemble des contenus présents sur ce site (textes, photographies, illustrations, logo et éléments graphiques) est protégé par le droit de la propriété intellectuelle.</p>
+    <p>Toute reproduction, représentation ou utilisation, totale ou partielle, sans autorisation préalable est interdite, sauf dispositions légales contraires.</p>
 
-    <h2>Crédits</h2>
-    <p>Photos&nbsp;: {{ site.nom }}.</p>
+    <h2>4. Responsabilité</h2>
+    <p>{{ site.nom }} s'efforce de fournir des informations fiables et régulièrement actualisées concernant ses prestations.</p>
+    <p>Les informations présentes sur ce site sont communiquées à titre indicatif. L'éditeur ne saurait être tenu responsable des erreurs ou omissions éventuelles.</p>
+
+    <h2>5. Contact</h2>
+    <p>Pour toute question concernant le site ou les prestations proposées, vous pouvez contacter {{ site.nom }} à l'adresse suivante&nbsp;:</p>
+    <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
   </div>
 </section>
