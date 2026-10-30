@@ -63,12 +63,6 @@ main h2,
   font-weight: 700;
 }
 
-/* Titres des parties et des prestations d'éducation en gras (demande d'Emma, 30/10) */
-main h2,
-.offer h3 {
-  font-weight: 700;
-}
-
 p,
 ul,
 ol {
@@ -294,14 +288,14 @@ strong {
   padding-block: clamp(2.5rem, 6vw, 4.5rem);
 }
 
-.section--surface {
-  background: var(--color-surface);
-}
-
 /* Fond uni : sans changement de couleur, deux marges qui se suivent s'additionneraient */
-.page-hero + .section,
 .section + .section {
   padding-top: 0;
+}
+
+/* Sous le titre de page, le même écart qu'entre deux sections */
+.page-hero + .section {
+  padding-top: clamp(1.25rem, 3vw, 2.5rem);
 }
 
 .page-hero {
