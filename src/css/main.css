@@ -528,14 +528,14 @@ a[href^="tel:"] {
   float: right;
   width: clamp(8rem, 30vw, 13rem);
   margin: 0 0 1rem 1.5rem;
-  shape-outside: circle(50%);
 }
 
+/* Carré aux coins arrondis, calé en bas : un cercle coupait le museau et la langue de Sirius */
 .about__photo img {
   aspect-ratio: 1;
   object-fit: cover;
-  object-position: 50% 85%; /* le museau et la langue de Sirius restent dans le cercle */
-  border-radius: 50%;
+  object-position: 50% 100%;
+  border-radius: 18%;
 }
 
 .about::after {
