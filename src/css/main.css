@@ -304,11 +304,6 @@ strong {
   padding-top: 0;
 }
 
-.lead {
-  font-size: 1.2em;
-  line-height: 1.55;
-}
-
 .page-hero {
   padding-block: clamp(2rem, 5vw, 3rem) clamp(1.25rem, 3vw, 2rem);
 }
