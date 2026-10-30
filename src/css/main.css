@@ -397,7 +397,7 @@ a[href^="tel:"] {
   display: flex;
   overflow: hidden;
   background: var(--color-primary-dark);
-  color: #fff;
+  color: var(--color-on-dark);
 }
 
 .hero__bg,
@@ -426,7 +426,7 @@ a[href^="tel:"] {
 }
 
 .hero h1 {
-  color: #fff;
+  color: var(--color-on-dark);
   text-shadow: 0 1px 10px rgb(0 0 0 / 0.35);
 }
 
@@ -452,7 +452,7 @@ a[href^="tel:"] {
 
 .hero__phone a {
   display: block;
-  color: #fff;
+  color: var(--color-on-dark);
   font-size: 1.75em;
   font-weight: var(--weight-bold);
   text-decoration: none;
