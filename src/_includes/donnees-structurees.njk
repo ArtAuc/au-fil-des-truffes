@@ -1,0 +1,32 @@
+{#- Fiche de l'entreprise pour Google (accueil seulement). Pas d'adresse postale : Emma travaille
+    chez ses clients, on donne la commune et la zone (Embrun, 20 km). Horaires : ceux où l'on peut la joindre. #}
+{%- set entreprise = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": site.nom,
+  "description": description,
+  "url": ("/" | htmlBaseUrl(siteUrl)),
+  "image": ("/og-image.jpeg" | htmlBaseUrl(siteUrl)),
+  "telephone": site.telephone_lien,
+  "priceRange": (tarifs | fourchettePrix),
+  "founder": { "@type": "Person", "name": "Emma Gremaud" },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Embrun",
+    "postalCode": "05200",
+    "addressRegion": "Hautes-Alpes",
+    "addressCountry": "FR"
+  },
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 44.5641, "longitude": 6.4953 },
+    "geoRadius": 20000
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "opens": "09:00",
+    "closes": "17:00"
+  }
+} %}
+<script type="application/ld+json">{{ entreprise | dump | safe }}</script>

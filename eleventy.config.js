@@ -16,6 +16,7 @@ async function image(src, alt, sizes = "100vw", className = "", loading = "lazy"
     sizes,
     loading,
     decoding: "async",
+    ...(loading === "eager" && { fetchpriority: "high" }),
     ...(className && { class: className }),
   });
 }
@@ -27,6 +28,14 @@ function insecable(text) {
     .replace(/</g, "&lt;")
     .replace(/(\d) /g, "$1\u00a0")
     .replace(/\p{L}+(?:-\p{L}+)+/gu, '<span class="nowrap">$&</span>');
+}
+
+// Prix le plus bas et le plus haut de tarifs.json, pour les données structurées : « 13 – 60 € »
+function fourchettePrix(tarifs) {
+  const prix = [...tarifs.education, ...tarifs.visites, ...tarifs.balades, ...tarifs.formules]
+    .map((p) => p.prix)
+    .filter((p) => typeof p === "number" && p > 0);
+  return `${Math.min(...prix)} – ${Math.max(...prix)} €`;
 }
 
 // 13 → « 13 € », 0 → « Offert », null → « Sur devis »
@@ -54,6 +63,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addShortcode("image", image);
   eleventyConfig.addFilter("prix", prix);
   eleventyConfig.addFilter("insecable", insecable);
+  eleventyConfig.addFilter("fourchettePrix", fourchettePrix);
   eleventyConfig.addFilter("min", (values) => Math.min(...values));
   eleventyConfig.addFilter("pluck", (items, key) => items.map((item) => item[key]));
 
