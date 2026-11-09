@@ -59,6 +59,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/logo");
   eleventyConfig.addPassthroughCopy("src/favicon.svg");
   eleventyConfig.addPassthroughCopy("src/apple-touch-icon.png");
+  eleventyConfig.addPassthroughCopy("src/favicon-192.png");
+  eleventyConfig.addPassthroughCopy("src/favicon.ico");
 
   eleventyConfig.addShortcode("image", image);
   eleventyConfig.addFilter("prix", prix);
